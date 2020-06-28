@@ -6,12 +6,8 @@
 		return this.fetch(`articles.json`)
 			.then(r => r.json())
 			.then(articles => {
-
-				//Populate projects from backend
-				const projects = Object.keys(session.projects).map(projectSlug => session.projects[projectSlug])
 				return { 
-					articles,
-					projects
+					articles
 				};
 		});
 	}
@@ -21,19 +17,14 @@
 <script>
 	import Header from '../components/header.svelte';
 	import Footer from '../components/footer.svelte';
-	export var projects;
 	export var articles;
 	export var segment;
 </script>
 
-<div class="flex flex-col min-h-full bg-blue-200">
+<div class="flex flex-col min-h-full bg-gray-100">
 	<Header />
-	<main class="container mx-auto flex-grow pt-16 sm:pt-0">
-		<div class="font-normal text-gray-900 text-base sm:text-base p-6 flex lg:p-8">
-			<div class="w-full sm:w-4/5 font-light">
-				<slot></slot>
-			</div>
-		</div>
+	<main class="container mx-auto flex-grow">
+		<slot></slot>
 	</main>
 
 	<Footer />

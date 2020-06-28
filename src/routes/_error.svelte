@@ -1,6 +1,4 @@
 <script>
-	import PageLayout from '../components/pageLayout.svelte'
-
 	export let status;
 	export let error;
 
@@ -11,14 +9,9 @@
 	<title>{status}</title>
 </svelte:head>
 
-<PageLayout>
-	<span slot="title">{status}</span>
-
-	<div slot="content">
-		{error.message}
-		{#if dev && error.stack}
-			<pre>{error.stack}</pre>
-		{/if}
-	</div>
-
-</PageLayout>
+<div>
+	{error.message}
+	{#if dev && error.stack}
+		<pre>{error.stack}</pre>
+	{/if}
+</div>

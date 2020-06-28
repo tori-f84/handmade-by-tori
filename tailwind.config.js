@@ -1,6 +1,10 @@
 module.exports = {
   theme: {
     extend: {
+      colors: {
+        "toriBG":"#DBE6E8",
+        "toriAccent":"#0084A3"
+      },
       spacing: {
         "1/2": "50%",
         "1/3": "33.333333%",

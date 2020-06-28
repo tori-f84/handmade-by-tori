@@ -1,8 +1,8 @@
 ---
-title: Hello Motivation
+title: Aqua Sea Glass
 pubdate: 2020-03-24
-smallImage: images/articles/hello-motivation/desk.jpg
-desc: I have a terrible habit of never writing about the things I make. This site is my attempt to fix that...
+smallImage: images/articles/hello-motivation/test.jpg
+desc: A description of this item, containing enough words to make someone interested in clicking through...
 keywords: sapper, tailwind, tailwindcss, svelte, sveltejs, space, portfolio
 ---
 

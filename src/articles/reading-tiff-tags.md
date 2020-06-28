@@ -1,8 +1,8 @@
 ---
-title: Reading Tiff Tags 🏷
+title: Chrysoprase
 pubdate: 2020-04-15
-smallImage: images/articles/reading-tiff-tags/tags.png
-desc: For my new tool, Geode, I needed to learn ALL about tiff tags. Turns out, there's a LOT of them...
+smallImage: images/articles/reading-tiff-tags/test.jpg
+desc: A description of this item, containing enough words to make someone interested in clicking through...
 keywords: geode, tiff, code, geotiff, mapping, data, gis
 ---
 

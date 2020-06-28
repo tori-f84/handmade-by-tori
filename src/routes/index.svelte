@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Matt Brealey</title>
+  <title>Handmade by Tori</title>
   <meta name="description" content="The portfolio site of a freelance creative problem solver." />
   <meta name="keywords" content="space, react, reactjs, threejs, sapper, svelte, sveltejs, ios, swift, 3d, ar, vfx, design"/>
 
@@ -19,37 +19,53 @@
 </svelte:head>
 
 <script context="module">
-	//Populate the projects from the session
-	export async function preload(page, session) {
-		return {
-			projects: Object.keys(session.projects).map(projectSlug => session.projects[projectSlug])
-		}
+	export async function preload({ params, query }) {
+		return this.fetch(`articles.json`).then(
+			r => r.json()
+		).then(articles => {
+			return { articles };
+		});
 	}
 </script>
 
 <script>
   import { onMount } from 'svelte'
-  import PageLayout from '../components/pageLayout.svelte'
 	import Card from '../components/card.svelte'
-	export let projects
+	export let articles
 </script>
 
-<PageLayout>
-	<span slot="title">Projects</span>
 
-	<div slot="content">
-		<!-- https://tailwindgrids.com/#/ -->
-		<div class="flex flex-wrap -mx-2 overflow-hidden sm:-mx-4">
-
-			{#each projects as project}
-				<Card
-					desc={project.shortDesc}
-					link={`./projects/${project.slug}`}
-					smallImage={project.smallImage}
-					title={project.name}
-				/>
-			{/each}
-
-		</div>
+<div class="py-4 px-4 sm:px-0 sm:py-8">
+	<!-- https://tailwindgrids.com/#/ -->
+	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base">
+		<span class="text-xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, inspired by nature.</span>
+		An intro paragraph maybe, containing some words describing some things about some stuff. Maybe a second sentence that causes everything to wrap around on desktop. 
+		Basically just enough so that people know there's stuff to buy down there.
 	</div>
-</PageLayout>
+
+	<hr class="my-6 sm:my-8"/>
+
+	<div class="overflow-hidden grid grid-cols-2 gap-4 sm:grid-cols-3">
+		{#each articles as article}
+			<Card
+				link={`./articles/${article.slug}`}
+				smallImage={article.smallImage}
+				title={article.title}
+			/>
+		{/each}
+		{#each articles as article}
+			<Card
+				link={`./articles/${article.slug}`}
+				smallImage={article.smallImage}
+				title={article.title}
+			/>
+		{/each}
+		{#each articles as article}
+			<Card
+				link={`./articles/${article.slug}`}
+				smallImage={article.smallImage}
+				title={article.title}
+			/>
+		{/each}
+	</div>
+</div>

@@ -13,32 +13,6 @@ html, body {
     overflow-y: auto;
 }
 
-/* Extract link styles */
-a {
-    cursor: pointer;
-}
-
-a.colorLink {
-    @apply text-pink-600;
-}
-
-.headerLink {  /* Not specific to links as Social component uses it too */
-    @apply block font-semibold text-center h-12 flex flex-col justify-center align-middle;
-}
-
-a.headerLinkActive {
-    @apply text-pink-500 underline cursor-default;
-}
-
-a:hover {
-    @apply text-pink-500 underline;
-}
-
-@screen sm {
-    a.headerLink {
-        @apply mt-0 ml-2 font-normal text-sm px-2;
-    }
-}
 
 /* Markdown */
 /* https://raw.githubusercontent.com/iandinwoodie/github-markdown-tailwindcss/master/markdown.css */
@@ -48,7 +22,7 @@ a:hover {
   }
 
   .markdown a {
-    @apply text-pink-600;
+    @apply text-blue-600;
   }
   
   .markdown > * + * {
@@ -72,7 +46,7 @@ a:hover {
   }
   
   .markdown h2 {
-    @apply mt-6 text-xl text-pink-600 font-light;
+    @apply mt-6 text-xl text-blue-600 font-light;
   }
   
   .markdown h3 {
