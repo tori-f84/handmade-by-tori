@@ -2,6 +2,8 @@
     export let link
     export let smallImage
     export let title
+    export let price
+    export let sold
 </script>
 
 <div class="overflow-hidden">
@@ -13,6 +15,11 @@
         <div class="flex pt-2 justify-between items-center">
             <div class="text-toriAccent group-hover:text-blue-500 text-sm font-medium">{title}</div>
         </div>
-        <span class="text-xs text-gray-800 font-light">£50</span>
+        <div class="flex text-sm text-gray-800 font-light">
+            <span class="{sold && "line-through"}">£{price}</span>
+            {#if sold}
+                <span class="pl-2">SOLD</span>
+            {/if}
+        </div>
     </div>
 </div>

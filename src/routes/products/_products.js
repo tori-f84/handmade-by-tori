@@ -7,9 +7,7 @@ export function getProducts () {
 		.filter(file => path.extname(file) === '.md')
 		.filter(file => file[0] !== '_')
 		.map(file => file.slice(0, -3));
-	return slugs.map((slug) => { return getProduct(slug)}).sort((a, b) => {
-		return a.metadata.pubdate < b.metadata.pubdate ? 1 : -1;
-	});
+	return slugs.map((slug) => { return getProduct(slug)});
 }
 
 export function getProduct(slug) {

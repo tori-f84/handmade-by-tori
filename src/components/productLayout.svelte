@@ -1,8 +1,10 @@
-<div class="px-4 sm:px-0 py-2">
-    <div class="mb-4 sm:mb-6 flex w-full flex-col">
-        <h1 class="text-3xl text-blue-600 font-thin sm:leading-6 mb-1 sm:mb-3 flex-1">
-            <slot name="title">No Title Given</slot>
-        </h1>
+<div class="py-6 px-4 sm:px-0 sm:py-8">
+    <div class="px-4 sm:px-0 py-2">
+        <div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
+            <span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">
+                <slot name="title">No Title Given</slot>
+            </span>
+            <slot name="content">No Content Found</slot>
+        </div>
     </div>
-    <slot name="content">No Content Found</slot>
 </div>

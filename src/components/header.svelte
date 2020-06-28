@@ -30,7 +30,7 @@
     <div class="container mx-auto sm:flex sm:justify-between sm:items-center">
         <div class="w-full flex flex-col items-center justify-center sm:justify-between px-4 sm:p-0">
             <a href="/" alt="Home">
-                <img class="h-24 sm:h-32 rounded-full" src="logoWithText.png" alt="Handmade by Tori" />
+                <img class="h-32 rounded-full" src="logoWithText.png" alt="Handmade by Tori" />
             </a>
             <div class="flex text-toriBG text-sm pt-3">
                 <a href="/" class="text-toriAccent {isShop ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">Shop</a>

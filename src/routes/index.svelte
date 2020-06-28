@@ -45,26 +45,14 @@
 
 	<hr class="my-8 sm:my-10"/>
 
-	<div class="overflow-hidden grid grid-cols-2 gap-4 sm:grid-cols-3">
+	<div class="overflow-hidden grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-4">
 		{#each products as product}
 			<Card
 				link={`./products/${product.slug}`}
 				smallImage={product.smallImage}
 				title={product.title}
-			/>
-		{/each}
-		{#each products as product}
-			<Card
-				link={`./products/${product.slug}`}
-				smallImage={product.smallImage}
-				title={product.title}
-			/>
-		{/each}
-		{#each products as product}
-			<Card
-				link={`./products/${product.slug}`}
-				smallImage={product.smallImage}
-				title={product.title}
+				price={product.price}
+				sold={product.sold}
 			/>
 		{/each}
 	</div>
