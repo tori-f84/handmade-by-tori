@@ -3,11 +3,11 @@
 
 <script context="module">
 	export async function preload({ params, query }, session) {
-		return this.fetch(`articles.json`)
+		return this.fetch(`products.json`)
 			.then(r => r.json())
-			.then(articles => {
+			.then(products => {
 				return { 
-					articles
+					products
 				};
 		});
 	}
@@ -17,8 +17,7 @@
 <script>
 	import Header from '../components/header.svelte';
 	import Footer from '../components/footer.svelte';
-	export var articles;
-	export var segment;
+	export var products;
 </script>
 
 <div class="flex flex-col min-h-full bg-gray-100">

@@ -1,4 +1,4 @@
-import { getArticle } from './_articles.js';
+import { getProduct } from './_products.js';
 
 const lookup = new Map();
 
@@ -6,8 +6,8 @@ export function get(req, res, next) {
 	const { slug } = req.params;
 
 	if (process.env.NODE_ENV !== 'production' || !lookup.has(slug)) {
-		const article = getArticle(slug, true); //Pass true to lookup prev/next articles
-		lookup.set(slug, JSON.stringify(article));
+		const product = getProduct(slug);
+		lookup.set(slug, JSON.stringify(product));
 	}
 
 	const json = lookup.get(slug);

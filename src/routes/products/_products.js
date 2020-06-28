@@ -2,18 +2,18 @@ import fs from 'fs'
 import path from 'path'
 import { toHTML } from '../../helpers/marked'
 
-export function getArticles () {
-	const slugs = fs.readdirSync('src/articles')
+export function getProducts () {
+	const slugs = fs.readdirSync('src/products')
 		.filter(file => path.extname(file) === '.md')
 		.filter(file => file[0] !== '_')
 		.map(file => file.slice(0, -3));
-	return slugs.map((slug) => { return getArticle(slug)}).sort((a, b) => {
+	return slugs.map((slug) => { return getProduct(slug)}).sort((a, b) => {
 		return a.metadata.pubdate < b.metadata.pubdate ? 1 : -1;
 	});
 }
 
-export function getArticle(slug) {
-	const file = `src/articles/${slug}.md`;
+export function getProduct(slug) {
+	const file = `src/products/${slug}.md`;
 	if (!fs.existsSync(file)) return null;
 
 	const markdown = fs.readFileSync(file, 'utf-8');

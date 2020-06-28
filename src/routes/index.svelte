@@ -20,10 +20,10 @@
 
 <script context="module">
 	export async function preload({ params, query }) {
-		return this.fetch(`articles.json`).then(
+		return this.fetch(`products.json`).then(
 			r => r.json()
-		).then(articles => {
-			return { articles };
+		).then(products => {
+			return { products };
 		});
 	}
 </script>
@@ -31,41 +31,54 @@
 <script>
   import { onMount } from 'svelte'
 	import Card from '../components/card.svelte'
-	export let articles
+	export let products
 </script>
 
 
-<div class="py-4 px-4 sm:px-0 sm:py-8">
+<div class="py-6 px-4 sm:px-0 sm:py-8">
 	<!-- https://tailwindgrids.com/#/ -->
-	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base">
-		<span class="text-xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, inspired by nature.</span>
+	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
+		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, <br class="sm:hidden"/>inspired by the sea.</span>
 		An intro paragraph maybe, containing some words describing some things about some stuff. Maybe a second sentence that causes everything to wrap around on desktop. 
 		Basically just enough so that people know there's stuff to buy down there.
 	</div>
 
-	<hr class="my-6 sm:my-8"/>
+	<hr class="my-8 sm:my-10"/>
 
 	<div class="overflow-hidden grid grid-cols-2 gap-4 sm:grid-cols-3">
-		{#each articles as article}
+		{#each products as product}
 			<Card
-				link={`./articles/${article.slug}`}
-				smallImage={article.smallImage}
-				title={article.title}
+				link={`./products/${product.slug}`}
+				smallImage={product.smallImage}
+				title={product.title}
 			/>
 		{/each}
-		{#each articles as article}
+		{#each products as product}
 			<Card
-				link={`./articles/${article.slug}`}
-				smallImage={article.smallImage}
-				title={article.title}
+				link={`./products/${product.slug}`}
+				smallImage={product.smallImage}
+				title={product.title}
 			/>
 		{/each}
-		{#each articles as article}
+		{#each products as product}
 			<Card
-				link={`./articles/${article.slug}`}
-				smallImage={article.smallImage}
-				title={article.title}
+				link={`./products/${product.slug}`}
+				smallImage={product.smallImage}
+				title={product.title}
 			/>
 		{/each}
+	</div>
+
+	<hr class="my-8 sm:my-10"/>
+
+	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
+		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Commissions</span>
+		Another paragraph describing how awesome it is that you take custom commissions for like, oh my god, really reasonable prices.
+	</div>
+
+	<div class="flex justify-center items-center mt-8 pb-4">
+			<button type="button" class="p-4 text-gray-200 bg-toriAccent rounded-lg sm:opacity-75 hover:opacity-100">
+				<a href="#">Contact Me</a>
+			</button>
 	</div>
 </div>
