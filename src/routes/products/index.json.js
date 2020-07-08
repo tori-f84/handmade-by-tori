@@ -8,6 +8,7 @@ export function get(req, res) {
 			title: product.metadata.title,
 			slug: product.slug,
 			smallImage: product.metadata.smallImage,
+			largeImage: product.metadata.largeImage,
 			price: product.metadata.price,
 			sold: product.metadata.sold === "true",
 		}));

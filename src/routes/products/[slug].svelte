@@ -16,8 +16,20 @@
 </script>
 
 <script>
-  import ProductLayout from '../../components/productLayout.svelte'
 	export let product;
+
+	//This is kind of awful but it works
+	let currentLargeImageNumber = 1;
+	let imageOptions = [1]
+	if (product.metadata.largeImage2) { imageOptions.push(2) }
+	if (product.metadata.largeImage3) { imageOptions.push(3) }
+	if (product.metadata.largeImage4) { imageOptions.push(4) }
+	if (product.metadata.largeImage5) { imageOptions.push(5) }
+
+	function setCurrentImage(num) {
+		currentLargeImageNumber = num
+	}
+
 </script>
 
 <svelte:head>
@@ -38,18 +50,58 @@
 	<meta property="twitter:title" content="{product.metadata.title}">
 	<meta property="twitter:description" content="{product.metadata.desc}">
 	<meta property="twitter:image" content="https://mattbrealey.com/{product.metadata.smallImage}">
+
 </svelte:head>
 
-<ProductLayout>
-	<span slot="title">{product.metadata.title}</span>
-    <section slot="content">
+<div class="py-6 px-4 sm:px-0 sm:py-8">
+    <div class="px-4 sm:px-0 py-2">
+        <div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
+            <span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">
+                {product.metadata.title}
+            </span>
+						
+						<!-- Big gallery image -->
+						<div class="relative overflow-hidden pb-2/3 rounded-md w-auto mt-4 sm:max-h-600">
+							<img class="absolute h-full w-full object-cover" src={product.metadata[`largeImage${currentLargeImageNumber}`]} alt={product.metadata.title} />
+						</div>
 
-		{#if product.largeImage}
-			<img class="rounded-md object-cover w-auto max-h-sm" src={product.metadata.largeImage} alt={product.metadata.title} />
-		{/if}
+						<!-- Thumbnails -->
+						<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 h-32 mt-2 sm:mt-3">
+							{#each imageOptions as imageOptionNumber}
+								<div
+									class="w-full h-full rounded-md bg-gray-300 overflow-hidden hover:opacity-70 transition-opacity duration-100 ease-in-out cursor-pointer"
+									on:click={() => {setCurrentImage(imageOptionNumber)}}
+								>
+									<img class="rounded-md object-cover w-full h-full" src={product.metadata[`largeImage${imageOptionNumber}`]} alt={product.metadata.title} />
+								</div>
+							{/each}
+						</div>
 
-		<span class="markdown">
-			{@html product.html}
-		</span>
-	</section>
-</ProductLayout>    
+						<div class="markdown text-center pt-4 sm:pt-8">
+							{@html product.html}
+						</div>
+
+						<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide text-center pt-4 sm:pt-8">
+							{#if product.metadata.sold === 'true'} 
+								Sold
+							{:else}
+								£{product.metadata.price}
+							{/if}
+						</span>
+
+						{#if product.metadata.sold !== 'true' && product.metadata.paypalLink !== ""} 
+							<div class="flex justify-center items-center w-full pt-4 sm:pt-8 pb-4 sm:pb-8">
+								<a
+									class="w-64 h-12 bg-paypal rounded-md flex justify-center items-center opacity-75 hover:opacity-100 cursor-pointer"
+									rel="noreferrer noopener"
+        					target="_blank"
+									href={product.metadata.paypalLink}
+								>
+									<img class="w-24" src="paypal_sm.png" alt="Paypal" />
+								</a>
+							</div>
+						{/if}
+
+        </div>
+    </div>
+</div>

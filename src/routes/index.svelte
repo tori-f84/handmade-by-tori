@@ -38,9 +38,11 @@
 <div class="py-6 px-4 sm:px-0 sm:py-8">
 	<!-- https://tailwindgrids.com/#/ -->
 	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
-		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, <br class="sm:hidden"/>inspired by the sea.</span>
-		An intro paragraph maybe, containing some words describing some things about some stuff. Maybe a second sentence that causes everything to wrap around on desktop. 
-		Basically just enough so that people know there's stuff to buy down there.
+		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, <br class="sm:hidden"/>inspired by the coast.</span>
+		<p>In my other life l've been working for a marine conservation organisation, and have been fortunate enough to travel to many far-flung places, all of which have the sea in common.
+		The ocean has been a life-giver and constant source of inspiration, including for my designs.</p>
+		<p class="mt-6">I fell in love with <i>chrysoprase</i>, a particularly beautiful stone the hues, depths and peculiarities of which vary enormously between each piece, reminiscent of the colours of the ocean.
+		My preferred setting is backless, which takes a little longer to create, but is worth it to show off both sides of the stones - often the back is a beautiful as the front!</p>
 	</div>
 
 	<hr class="my-8 sm:my-10"/>
@@ -61,7 +63,8 @@
 
 	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
 		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Commissions</span>
-		Another paragraph describing how awesome it is that you take custom commissions for like, oh my god, really reasonable prices.
+		<p>I can adjust ring sizes or create something entirely custom with a stone of your choosing from my collection. Contact me below for more details.
+		You can also follow me on instagram for a wider selection of my work and a wider choice of stones.</p>
 	</div>
 
 	<div class="flex justify-center items-center mt-8 pb-4">
