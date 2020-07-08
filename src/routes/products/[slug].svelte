@@ -61,7 +61,7 @@
             </span>
 						
 						<!-- Big gallery image -->
-						<div class="relative overflow-hidden pb-2/3 rounded-md w-auto mt-4 sm:max-h-600">
+						<div class="relative overflow-hidden pb-2/3 sm:pb-3/5 rounded-md w-auto mt-4 sm:max-h-600">
 							<img class="absolute h-full w-full object-cover" src={product.metadata[`largeImage${currentLargeImageNumber}`]} alt={product.metadata.title} />
 						</div>
 

@@ -33,7 +33,7 @@
                 <img class="h-32 rounded-full" src="logoWithText.png" alt="Handmade by Tori" />
             </a>
             <div class="flex text-toriBG text-sm pt-3">
-                <a href="/" class="text-toriAccent {isShop ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">Shop</a>
+                <a href="/" class="text-toriAccent {isShop ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">Home</a>
                 <a href="/aboutMe" class="pl-6 text-toriAccent opacity-60 {isAboutMe ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">About me</a>
             </div>
         </div>
