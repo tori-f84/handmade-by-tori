@@ -3,7 +3,13 @@ module.exports = {
     extend: {
       colors: {
         "toriBG":"#DBE6E8",
-        "toriAccent":"#0084A3"
+        "toriAccent":"#0084A3",
+        "paypal":"#FFC439"
+      },
+      maxHeight: {
+        '400':'400px',
+        '600':'600px',
+        '800':'800px'
       },
       spacing: {
         "1/2": "50%",
