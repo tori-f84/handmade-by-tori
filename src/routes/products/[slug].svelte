@@ -62,7 +62,7 @@
 						
 						<!-- Big gallery image -->
 						<div class="relative overflow-hidden pb-2/3 sm:pb-3/5 rounded-md w-auto mt-4 sm:max-h-600">
-							<img class="absolute h-full w-full object-cover" src={product.metadata[`largeImage${currentLargeImageNumber}`]} alt={product.metadata.title} />
+							<img class="absolute h-full w-full object-cover" src="./{product.metadata[`largeImage${currentLargeImageNumber}`]}" alt={product.metadata.title} />
 						</div>
 
 						<!-- Thumbnails -->
@@ -72,7 +72,7 @@
 									class="w-full h-full rounded-md bg-gray-300 overflow-hidden hover:opacity-70 transition-opacity duration-100 ease-in-out cursor-pointer"
 									on:click={() => {setCurrentImage(imageOptionNumber)}}
 								>
-									<img class="rounded-md object-cover w-full h-full" src={product.metadata[`largeImage${imageOptionNumber}`]} alt={product.metadata.title} />
+									<img class="rounded-md object-cover w-full h-full" src="./{product.metadata[`largeImage${imageOptionNumber}`]}" alt={product.metadata.title} />
 								</div>
 							{/each}
 						</div>
