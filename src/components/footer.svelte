@@ -12,6 +12,19 @@
                 <path d="m416.627 117.604c0 16.696-13.535 30.23-30.231 30.23-16.695 0-30.23-13.534-30.23-30.23s13.535-30.23 30.23-30.23c16.696 0 30.231 13.534 30.231 30.23z"/>
             </g>
         </svg>
-        <span class="ml-2 group-hover:text-toriAccent">handmade_bytori</span>
+    </a>
+
+    <a
+        class="flex items-center cursor-pointer group text-gray-600 ml-6"
+        rel="noreferrer noopener"
+        target="_blank"
+        href="mailto:ishandmadebytori@gmail.com"
+    >
+        <svg class="w-8 h-8 fill-current group-hover:text-toriAccent" clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 1002 653" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(-11.1575 -185.771)">
+                <path d="m1029.63 264.676c0-33.701-27.36-61.061-61.06-61.061h-879.563c-33.7 0-61.061 27.36-61.061 61.061v530.335c0 33.701 27.361 61.061 61.061 61.061h879.563c33.7 0 61.06-27.36 61.06-61.061zm-59.999 0v530.335c0 .586-.475 1.061-1.061 1.061h-879.563c-.585 0-1.061-.475-1.061-1.061v-530.335c0-.586.476-1.061 1.061-1.061h879.563c.586 0 1.061.475 1.061 1.061z" transform="translate(-16.7888 -17.8436)"/>
+                <path d="m512.024 560.707 422.135-337.311c12.936-10.336 31.829-8.226 42.165 4.709s8.225 31.828-4.71 42.164l-440.887 352.295c-10.962 8.76-26.532 8.75-37.483-.023l-439.782-352.295c-12.922-10.352-15.009-29.247-4.657-42.17 10.351-12.922 29.247-15.009 42.17-4.658z"/>
+            </g>
+        </svg>
     </a>
 </footer> 
