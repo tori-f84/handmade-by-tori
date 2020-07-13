@@ -35,6 +35,26 @@
 
 <svelte:head>
 	<title>{product.metadata.title} // Handmade by Tori</title>
+			<meta name="description" content="{product.metadata.title}" />
+			<meta name="keywords" content="handmade, bespoke, jewellery, coast, silver, tori, crysoprase, australia, stone, gemstone, precious, necklace, ring, earrings, pendant, gifts for her, ocean, sea, waves, shore, fossil, ammonite, stirling, stirling silver, fine silver, shell, beach"/>
+
+			<!-- Open Graph / Facebook -->
+			<meta property="og:type" content="website">
+			<meta property="og:url" content="https://www.handmadebytori.com/products/{product.slug}">
+			<meta property="og:title" content="Handmade by Tori">
+			<meta property="og:description" content="{product.metadata.title}">
+			{#if product.metadata.thumbImage1}
+					<meta property="og:image" content="https://www.handmadebytori.com/{product.metadata.thumbImage1}">
+			{/if}
+
+			<!-- Twitter -->
+			<meta property="twitter:card" content="summary_large_image">
+			<meta property="twitter:url" content="https://www.handmadebytori.com/products/{product.slug}">
+			<meta property="twitter:title" content="Handmade by Tori">
+			<meta property="twitter:description" content="{product.metadata.title}">
+			{#if product.metadata.thumbImage1}
+					<meta property="og:image" content="https://www.handmadebytori.com/{product.metadata.thumbImage1}">
+			{/if}
 </svelte:head>
 
 <div class="py-6 px-4 sm:px-0 sm:py-8">
@@ -44,7 +64,7 @@
                 {product.metadata.title}
             </span>
 						
-						<div class="relative overflow-hidden pb-2/3 sm:pb-1/2 rounded-md w-auto mt-4 sm:max-h-600">
+						<div class="relative overflow-hidden pb-2/3 rounded-md w-auto mt-4 sm:max-h-600">
 							<img class="absolute h-full w-full object-cover" src="./{product.metadata[`largeImage${currentLargeImageNumber}`]}" alt={product.metadata.title} />
 						</div>
 
