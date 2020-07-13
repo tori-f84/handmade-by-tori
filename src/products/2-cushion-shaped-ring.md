@@ -18,7 +18,8 @@ sold: false
 paypalLink: https://www.paypal.com/instantcommerce/checkout/9BLX7RMLPCJ34
 ---
 
-Size P/O 
-Cute, little cushion-shaped chrysoprase, hand-mined in Western Australia and set in a backless setting.
+Size P/O
 
-I love the beautiful turquoise colour of this stone and the little veins in this stone remind me of a turtle shell.
+Cute, little cushion-shaped chrysoprase, hand-mined in Western Australia and finished in a backless sterling silver setting.
+
+I love the beautiful turquoise colour of this stone. The little veins remind me of a turtle shell.

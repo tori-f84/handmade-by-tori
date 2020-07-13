@@ -18,6 +18,8 @@ sold: false
 paypalLink: https://py.pl/8brxHCjHDb3
 ---
 
+Size P 1/2
+
 Beautiful translucent chrysoprase, capturing hints of earthly tones and different shades of apple green.
 
 This stone reminds me of a river in summer, surrounded by lucious trees running alongside smooth pebbles.

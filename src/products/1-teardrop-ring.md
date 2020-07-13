@@ -19,4 +19,5 @@ paypalLink: https://www.paypal.com/instantcommerce/checkout/GJNTYTA8FKD5E
 ---
 
 Size O
-One off, teardrop ring (ring size O). Handmade using hand-mined chrysoprase from Western Australia and stirling silver. Beautiful apple green colour, almost perfectly uniform colour with a small white speck - like a white horse on top of a wave. Stamped 925 and set in a backless setting so the light can shine through and really show off the stone. 
+
+One off, teardrop ring. Handmade using stirling silver and hand-mined chrysoprase from Western Australia. Beautiful apple green colour, almost perfectly uniform with a small white speck - like a white horse on top of a wave. Stamped <i>925</i> and set in a backless setting so the light can shine through and really show off the stone. 

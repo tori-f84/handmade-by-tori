@@ -20,4 +20,4 @@ paypalLink: http://google.com
 
 Chrysoprase and stirling silver.
 
-This one reminds me of where the earthy water of an estury meets the bright blue turquoise water off-shore. 
+This one reminds me of where the earthy water of an estuary meets the bright blue turquoise water off-shore. 

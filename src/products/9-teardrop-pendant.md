@@ -2,13 +2,13 @@
 title: Teardrop pendant
 
 thumbImage1: images/products/9/1_thumb.jpg
-thumbImage2: null
+thumbImage2: images/products/9/2_thumb.jpg
 thumbImage3: null
 thumbImage4: null
 thumbImage5: null
 
 largeImage1: images/products/9/1.jpg
-largeImage2: null
+largeImage2: images/products/9/2.jpg
 largeImage3: null
 largeImage4: null
 largeImage5: null
@@ -18,6 +18,6 @@ sold: false
 paypalLink: https://py.pl/CN7tb
 ---
 
-Turquise coloured teardrop chrysoprase set in backless sterling silver setting. Oversized feature loop with additional jump ring big enough to accept a big chain so you can wear it chunky and long!
+Turquoise coloured, teardrop chrysoprase, set in backless sterling silver setting. Oversized feature loop with additional loop, big enough to accept a chunky chain so you can wear it long!
 
-*chain not included*
+*Chain not included*

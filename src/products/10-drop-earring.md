@@ -1,5 +1,5 @@
 ---
-title: Drop earrings
+title: Drop Earrings
 
 thumbImage1: images/products/10/1_thumb.jpg
 thumbImage2: images/products/10/2_thumb.jpg

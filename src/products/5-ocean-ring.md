@@ -18,7 +18,7 @@ sold: true
 paypalLink: http://google.com
 ---
 
-*SOLD, but more are on the way. Contact me for more details, or custom commissions*
+*SOLD, but more stones like this are on the way. Contact me for more details, or custom commissions*
 
 Lovely, medium sized, square-shaped ring. Handmade using hand-mined chrysoprase from Western Australia and stirling silver.
 
