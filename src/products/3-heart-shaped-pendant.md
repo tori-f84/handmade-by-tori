@@ -1,16 +1,23 @@
 ---
 title: Heart-shaped Pendant
-smallImage: images/products/3/main.jpg
-largeImage1: images/products/3/main.jpg
-largeImage2: images/products/3/main.jpg
-largeImage3: images/products/3/main.jpg
-largeImage4: images/products/3/main.jpg
-largeImage5: images/products/3/main.jpg
-price: 15
-sold: false
+
+thumbImage1: images/products/3/1_thumb.jpg
+thumbImage2: null
+thumbImage3: null
+thumbImage4: null
+thumbImage5: null
+
+largeImage1: images/products/3/1.jpg
+largeImage2: null
+largeImage3: null
+largeImage4: null
+largeImage5: null
+
+price: SOLD
+sold: true
 paypalLink: http://google.com
 ---
 
 Chrysoprase and stirling silver.
 
-This one reminds me of the earth and the grass, with earthly hues and pale green of trees.
+This one reminds me of where the earthy water of an estury meets the bright blue turquoise water off-shore. 

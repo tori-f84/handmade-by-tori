@@ -1,4 +1,3 @@
-
 <script>
     //Grab the active route
     import { stores } from '@sapper/app'
@@ -6,22 +5,19 @@
 
     //Match the current route to the available options
     // TODO : svelte should declare these vars for us in the $: statement, but I'm getting undeclared errors
-    let isShop;
-    let isAboutMe;
+    let isOnHomePage;
+    let isOnAboutPage;
     $: {
         //Dynamically update the vars to match the current route
-        isShop = $page.path === "/"
-        isAboutMe = $page.path === "/aboutMe"
+        isOnHomePage = $page.path === "/"
+        isOnAboutPage = $page.path === "/about"
     }
 
     //Close the menu on route change
     let oldRoute = $page.path
     $: {
-        //If the route has changed
-        if (oldRoute !== $page.path) { 
-            //Store the new route, and close the menu
-            oldRoute = $page.path
-        }
+        //Store the new route, and close the menu
+        oldRoute = $page.path
     }
 
 </script>
@@ -33,8 +29,8 @@
                 <img class="h-32 rounded-full" src="logoWithText.png" alt="Handmade by Tori" />
             </a>
             <div class="flex text-toriBG text-sm pt-3">
-                <a href="/" class="text-toriAccent {isShop ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">Home</a>
-                <a href="/aboutMe" class="pl-6 text-toriAccent opacity-60 {isAboutMe ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">About me</a>
+                <a href="/" class="text-toriAccent {isOnHomePage ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">Home</a>
+                <a href="/about" class="pl-6 text-toriAccent opacity-60 {isOnAboutPage ? "opacity-100 underline" : "opacity-75"} hover:opacity-100 hover:underline">About</a>
             </div>
         </div>
     </div>

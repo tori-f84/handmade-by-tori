@@ -1,17 +1,22 @@
 ---
 title: Teardrop Ring
-smallImage: images/products/1/main.jpg
-largeImage1: images/products/1/main.jpg
-largeImage2: images/products/2/main.jpg
-largeImage3: images/products/3/main.jpg
-largeImage4: images/products/4/main.jpg
-largeImage5: images/products/5/main.jpg
-price: 39
+
+thumbImage1: images/products/1/1_thumb.jpg
+thumbImage2: images/products/1/2_thumb.jpg
+thumbImage3: images/products/1/3_thumb.jpg
+thumbImage4: images/products/1/4_thumb.jpg
+thumbImage5: images/products/1/5_thumb.jpg
+
+largeImage1: images/products/1/1.jpg
+largeImage2: images/products/1/2.jpg
+largeImage3: images/products/1/3.jpg
+largeImage4: images/products/1/4.jpg
+largeImage5: images/products/1/5.jpg
+
+price: 55
 sold: false
-paypalLink: http://google.com
+paypalLink: https://www.paypal.com/instantcommerce/checkout/GJNTYTA8FKD5E
 ---
 
-Lovely, medium sized teardrop ring. Handmade using hand-mined chrysoprase from Western Australia and stirling silver.
-
-I love the colour of these stones and put in extra time to make backless bezels, so the light can shine through and really show off the stone. 
-The stone itself is almost perfect, with a little white inclusion to remind you it's a real stone.
+Size O
+One off, teardrop ring (ring size O). Handmade using hand-mined chrysoprase from Western Australia and stirling silver. Beautiful apple green colour, almost perfectly uniform colour with a small white speck - like a white horse on top of a wave. Stamped 925 and set in a backless setting so the light can shine through and really show off the stone. 

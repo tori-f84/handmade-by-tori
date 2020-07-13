@@ -1,6 +1,3 @@
-<!-- https://github.com/sveltejs/sapper-template/issues/188 -->
-<!-- https://github.com/sveltejs/sapper/issues/703 -->
-
 <script context="module">
 	export async function preload({ params, query }, session) {
 		return this.fetch(`products.json`)

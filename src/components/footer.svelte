@@ -12,6 +12,6 @@
                 <path d="m416.627 117.604c0 16.696-13.535 30.23-30.231 30.23-16.695 0-30.23-13.534-30.23-30.23s13.535-30.23 30.23-30.23c16.696 0 30.231 13.534 30.231 30.23z"/>
             </g>
         </svg>
-        <span class="ml-2 group-hover:text-toriAccent">@handmade_bytori</span>
+        <span class="ml-2 group-hover:text-toriAccent">handmade_bytori</span>
     </a>
 </footer> 

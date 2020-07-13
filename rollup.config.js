@@ -11,6 +11,7 @@ import sveltePreprocess from 'svelte-preprocess'
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
+const production = !process.env.development;
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
 
@@ -21,7 +22,8 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				'PUBLIC_URL': production ? JSON.stringify("https://tori-f84.github.io/") : JSON.stringify("./")
 			}),
 			svelte({
 				preprocess: sveltePreprocess({ postcss: true }),

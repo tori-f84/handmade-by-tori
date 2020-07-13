@@ -25,7 +25,7 @@
     "export": "npm run build:tailwind && sapper export",
     "start": "node __sapper__/build",
     "test": "run-p --race dev cy:run",
-    "deploy": "npm run export && cp -v __sapper__/export/* ../tori-f84.github.io/ && npm run publish --prefix ../tori-f84.github.io"
+    "deploy": "npm run export && npm run clean --prefix ../tori-f84.github.io && cp -v -a __sapper__/export/* ../tori-f84.github.io/ && npm run publish --prefix ../tori-f84.github.io"
   },
   "dependencies": {
     "compression": "^1.7.1",

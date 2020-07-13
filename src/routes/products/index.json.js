@@ -4,16 +4,12 @@ let contents;
 
 export function get(req, res) {
 	if (!contents || process.env.NODE_ENV !== 'production') {
-		const products = getProducts().map(product => ({
-			title: product.metadata.title,
-			slug: product.slug,
-			smallImage: product.metadata.smallImage,
-			largeImage: product.metadata.largeImage,
-			price: product.metadata.price,
-			sold: product.metadata.sold === "true",
-		}));
-
-		contents = JSON.stringify(products);
+		contents = JSON.stringify(
+			getProducts().map(product => ({
+				...product,
+				slug: product.slug
+			}))
+		);
 	}
 
 	res.writeHead(200, {

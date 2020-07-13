@@ -18,39 +18,23 @@
 <script>
 	export let product;
 
-	//This is kind of awful but it works
-	let currentLargeImageNumber = 1;
 	let imageOptions = [1]
-	if (product.metadata.largeImage2) { imageOptions.push(2) }
-	if (product.metadata.largeImage3) { imageOptions.push(3) }
-	if (product.metadata.largeImage4) { imageOptions.push(4) }
-	if (product.metadata.largeImage5) { imageOptions.push(5) }
+	if (product.metadata.largeImage2 !== "null") { imageOptions.push(2) }
+	if (product.metadata.largeImage3 !== "null") { imageOptions.push(3) }
+	if (product.metadata.largeImage4 !== "null") { imageOptions.push(4) }
+	if (product.metadata.largeImage5 !== "null") { imageOptions.push(5) }
 
 	function setCurrentImage(num) {
 		currentLargeImageNumber = num
 	}
 
+	//This is kind of awful but it works
+	let currentLargeImageNumber = 1;
+
 </script>
 
 <svelte:head>
-	<title>{product.metadata.title} // Matt Brealey</title>
-	<meta name="description" content="{product.metadata.desc}" />
-	<meta name="keywords" content="{product.metadata.keywords}"/>
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://mattbrealey.com/products/{product.slug}">
-	<meta property="og:title" content="{product.metadata.title}">
-	<meta property="og:description" content="{product.metadata.desc}">
-	<meta property="og:image" content="https://mattbrealey.com/{product.metadata.smallImage}">
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://mattbrealey.com/products/{product.slug}">
-	<meta property="twitter:title" content="{product.metadata.title}">
-	<meta property="twitter:description" content="{product.metadata.desc}">
-	<meta property="twitter:image" content="https://mattbrealey.com/{product.metadata.smallImage}">
-
+	<title>{product.metadata.title} // Handmade by Tori</title>
 </svelte:head>
 
 <div class="py-6 px-4 sm:px-0 sm:py-8">
@@ -60,24 +44,24 @@
                 {product.metadata.title}
             </span>
 						
-						<!-- Big gallery image -->
-						<div class="relative overflow-hidden pb-2/3 sm:pb-3/5 rounded-md w-auto mt-4 sm:max-h-600">
+						<div class="relative overflow-hidden pb-2/3 sm:pb-1/2 rounded-md w-auto mt-4 sm:max-h-600">
 							<img class="absolute h-full w-full object-cover" src="./{product.metadata[`largeImage${currentLargeImageNumber}`]}" alt={product.metadata.title} />
 						</div>
 
-						<!-- Thumbnails -->
-						<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 h-32 mt-2 sm:mt-3">
-							{#each imageOptions as imageOptionNumber}
-								<div
-									class="w-full h-full rounded-md bg-gray-300 overflow-hidden hover:opacity-70 transition-opacity duration-100 ease-in-out cursor-pointer"
-									on:click={() => {setCurrentImage(imageOptionNumber)}}
-								>
-									<img class="rounded-md object-cover w-full h-full" src="./{product.metadata[`largeImage${imageOptionNumber}`]}" alt={product.metadata.title} />
-								</div>
-							{/each}
-						</div>
+						{#if imageOptions.length > 1}
+							<div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3 mt-2 sm:mt-3">
+								{#each imageOptions as imageOptionNumber}
+									<div
+										class="w-full rounded-md bg-gray-300 overflow-hidden hover:opacity-70 transition-opacity duration-100 ease-in-out cursor-pointer relative pb-1/2"
+										on:click={() => {setCurrentImage(imageOptionNumber)}}
+									>
+										<img class="absolute rounded-md object-cover w-full h-full" src="./{product.metadata[`thumbImage${imageOptionNumber}`]}" alt={product.metadata.title} />
+									</div>
+								{/each}
+							</div>
+						{/if}
 
-						<div class="markdown text-center pt-4 sm:pt-8">
+						<div class="markdown text-center mt-8">
 							{@html product.html}
 						</div>
 

@@ -1,21 +1,5 @@
 <svelte:head>
   <title>Handmade by Tori</title>
-  <!-- <meta name="description" content="The portfolio site of a freelance creative problem solver." />
-  <meta name="keywords" content="space, react, reactjs, threejs, sapper, svelte, sveltejs, ios, swift, 3d, ar, vfx, design"/> -->
-
-  <!-- Open Graph / Facebook -->
-  <!-- <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mattbrealey.com">
-  <meta property="og:title" content="Matt Brealey">
-  <meta property="og:description" content="The portfolio site of a freelance creative problem solver.">
-  <meta property="og:image" content="https://mattbrealey.com/profile.jpg">
-
-  <!-- Twitter -->
-  <!-- <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://mattbrealey.com">
-  <meta property="twitter:title" content="Matt Brealey">
-  <meta property="twitter:description" content="The portfolio site of a freelance creative problem solver.">
-  <meta property="twitter:image" content="https://mattbrealey.com/profile.jpg"> --> -->
 </svelte:head>
 
 <script context="module">
@@ -31,18 +15,16 @@
 <script>
   import { onMount } from 'svelte'
 	import Card from '../components/card.svelte'
+
 	export let products
+	
 </script>
 
 
 <div class="py-6 px-4 sm:px-0 sm:py-8">
-	<!-- https://tailwindgrids.com/#/ -->
 	<div class="font-light text-gray-800 flex flex-col text-sm sm:text-base text-center px-2 sm:px-6">
 		<span class="text-2xl sm:text-4xl sm:font-thin text-toriAccent tracking-wide pb-2">Bespoke jewellery, <br class="sm:hidden"/>inspired by the coast.</span>
-		<p>In my other life l've been working for a marine conservation organisation, and have been fortunate enough to travel to many far-flung places, all of which have the sea in common.
-		The ocean has been a life-giver and constant source of inspiration, including for my designs.</p>
-		<p class="mt-6">I fell in love with <i>chrysoprase</i>, a particularly beautiful stone the hues, depths and peculiarities of which vary enormously between each piece, reminiscent of the colours of the ocean.
-		My preferred setting is backless, which takes a little longer to create, but is worth it to show off both sides of the stones - often the back is a beautiful as the front!</p>
+		<p>All of my jewellery is hand-made the slow way, and my pieces are unique. All the stones I use are one of a kind and the shell-based jewellery is based on shells and fossils I have collected myself. I also take commissions.</p>
 	</div>
 
 	<hr class="my-8 sm:my-10"/>
@@ -51,10 +33,10 @@
 		{#each products as product}
 			<Card
 				link={`./products/${product.slug}`}
-				smallImage={product.smallImage}
-				title={product.title}
-				price={product.price}
-				sold={product.sold}
+				thumb={product.metadata.thumbImage1}
+				title={product.metadata.title}
+				price={product.metadata.price}
+				sold={product.metadata.sold === "true"}
 			/>
 		{/each}
 	</div>

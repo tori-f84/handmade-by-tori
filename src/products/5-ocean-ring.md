@@ -1,11 +1,18 @@
 ---
-title: Square-shaped Ring
-smallImage: images/products/5/main.jpg
-largeImage1: images/products/5/main.jpg
-largeImage2: images/products/5/main.jpg
-largeImage3: images/products/5/main.jpg
-largeImage4: images/products/5/main.jpg
-largeImage5: images/products/5/main.jpg
+title: Ocean Ring
+
+thumbImage1: images/products/5/1_thumb.jpg
+thumbImage2: images/products/5/2_thumb.jpg
+thumbImage3: null
+thumbImage4: null
+thumbImage5: null
+
+largeImage1: images/products/5/1.jpg
+largeImage2: images/products/5/2.jpg
+largeImage3: null
+largeImage4: null
+largeImage5: null
+
 price: 39
 sold: true
 paypalLink: http://google.com
